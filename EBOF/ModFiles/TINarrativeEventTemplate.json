@@ -4,13 +4,13 @@
       "friendlyName": "First EBOF influence penalty",
 		"displayName": "Rising Faction Skepticism",
       "requiresAliens": false,
-      "logPublicity": "global",
-      "alertPublicity": "factions",
-      "repeatable": "OncePerCampaign",
+      "logPublicity": "target",
+      "alertPublicity": "target",
+      "repeatable": "OncePerFection",
       "numOptions": 1,
       "forceEvent": true,
       "reqEventUnlock": false,
-      "targetType": "global",
+      "targetType": "faction",
       "hitAllQualifyingTargets": true,
       "firstTargetNotificationOnly": false,
       "global_cooldown_months": 0,
@@ -41,13 +41,13 @@
       "friendlyName": "Second EBOF influence penalty",
 		"displayName": "Looming Political Constraints",
       "requiresAliens": false,
-      "logPublicity": "global",
-      "alertPublicity": "factions",
-      "repeatable": "OncePerCampaign",
+      "logPublicity": "target",
+      "alertPublicity": "target",
+      "repeatable": "OncePerFection",
       "numOptions": 1,
       "forceEvent": true,
       "reqEventUnlock": false,
-      "targetType": "global",
+      "targetType": "faction",
       "hitAllQualifyingTargets": true,
       "firstTargetNotificationOnly": false,
       "global_cooldown_months": 0,
@@ -66,7 +66,7 @@
                {
                   "weight": 1,
                   "effectTemplateNames": [
-                     "Effect_EBOF_InfluencePenalty1"
+                     "Effect_EBOF_InfluencePenalty2"
                   ]
                }
             ]
@@ -78,13 +78,13 @@
       "friendlyName": "Third EBOF influence penalty",
 		"displayName": "Blood in the Water",
       "requiresAliens": false,
-      "logPublicity": "global",
-      "alertPublicity": "factions",
-      "repeatable": "OncePerCampaign",
+      "logPublicity": "target",
+      "alertPublicity": "target",
+      "repeatable": "OncePerFection",
       "numOptions": 1,
       "forceEvent": true,
       "reqEventUnlock": false,
-      "targetType": "global",
+      "targetType": "faction",
       "hitAllQualifyingTargets": true,
       "firstTargetNotificationOnly": false,
       "global_cooldown_months": 0,
@@ -103,7 +103,7 @@
                {
                   "weight": 1,
                   "effectTemplateNames": [
-                     "Effect_EBOF_InfluencePenalty1"
+                     "Effect_EBOF_InfluencePenalty3"
                   ]
                }
             ]

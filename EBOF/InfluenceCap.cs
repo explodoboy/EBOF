@@ -24,7 +24,9 @@ namespace EBOF
             // It also enforces a cap to influence storage so killing off a faction doesn't take literally forever.
 
             // If mod has been disabled, abort patch.
+            // Also abort if ideology hasn't been set. This prevents a crash when starting a new campaign.
             if (!Main.enabled) { return; }
+            if (__instance.ideology == null) { return; }
 
             // If the faction has been marked, then their influence is locked to 0 at all times, no matter what.
             int thisFaction = (int)__instance.ideology.ideology;
@@ -40,7 +42,7 @@ namespace EBOF
                 return; // No need to waste time on re-checking markedForDeath below, or setting the cap.
             }
 
-            // If the faction has no councilors, and have zero influence with an active defecit, they are marked for death.
+            // If the faction has no councilors, and zero influence with an active defecit, they are marked for death.
             // First checks if the faction is already marked. If so, checking again is totally unnecessary.
             if (!markedForDeath[thisFaction] && __instance.resources[FactionResource.Influence] <= 0 && __instance.numActiveCouncilors == 0 && monthlyIncome < 0)
             {
